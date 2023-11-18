@@ -1,0 +1,56 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Window
+    x:Class="DataGridExample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DataGridExample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel>
+        <!-- Some rectanges in a StackPanel -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <StackPanel.Children>
+                <Rectangle Fill="Blue" Height="40" HorizontalAlignment="Stretch" Margin="20,0,20,0"/>
+                <Rectangle Fill="LightBlue" Height="40"  HorizontalAlignment="Stretch" Margin="20,0,20,0"/>
+                <Button x:Name="myButton" HorizontalAlignment="Center" Click="myButton_Click">Click Me</Button>
+            </StackPanel.Children>
+        </StackPanel>
+
+        <!-- Some rectanges in a grid -->
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="RED" Grid.Column="1" Grid.Row="1"/>
+            <Rectangle Fill="MistyRose" Grid.Column="0" Grid.Row="0"/>
+        </Grid>
+
+        <!-- A grid with StackPanel Cells-->
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1" Grid.Row="1">
+                <Rectangle Fill="Green" Width="20" Height="20"/>
+                <TextBlock Text="Some Text"/>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="0">
+                <Rectangle Fill="GreenYellow" Width="20" Height="20"/>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Window>
