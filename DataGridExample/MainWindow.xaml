@@ -81,6 +81,7 @@
             </StackPanel>
         </Grid>
 
+        <TextBlock Text="DataGrid Example" FontSize="36" FontWeight="Bold"/>
         <!-- DataGrid Example -->
         <controls:DataGrid x:Name="dataGrid1" 
             Height="600" Margin="12"

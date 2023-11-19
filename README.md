@@ -11,6 +11,8 @@ This solution is a place for me to learn about WinUI3 Layout, as well as store s
 
 ## Day Two
 * Implemented a DataGrid example from the **Windows Community Toolkit**
+![Day Two](images/02_DayTwo.png)
+___(2023-11-19)___
 
 ## Day One 
 * Some different layouts of cells within a grid. 
