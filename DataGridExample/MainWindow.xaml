@@ -52,5 +52,33 @@
                 <Rectangle Fill="GreenYellow" Width="20" Height="20"/>
             </StackPanel>
         </Grid>
+
+        <!-- A Grid Layout -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>                
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" Background="LightGray" Grid.Row="0">
+                <TextBlock Text="Column Header 1" FontWeight="Bold" Grid.Column="0" />
+                <TextBlock Text="Column Header 2" FontWeight="Bold" Grid.Column="1" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <ListView>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Item1"/>
+                        <TextBlock Text="Item2"/>
+                    </StackPanel>
+                </ListView>
+            </StackPanel>
+        </Grid>
+        
     </StackPanel>
 </Window>
