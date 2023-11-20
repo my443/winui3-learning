@@ -83,9 +83,12 @@
 
         <TextBlock Text="DataGrid Example" FontSize="36" FontWeight="Bold"/>
         <!-- DataGrid Example -->
+        
         <controls:DataGrid x:Name="dataGrid1" 
             Height="600" Margin="12"
             AutoGenerateColumns="True"
+            CanUserResizeColumns ="True"
+            CanUserReorderColumns="True"
             ItemsSource="{x:Bind Customers}" />  
 
     </StackPanel>
